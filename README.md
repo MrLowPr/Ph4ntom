@@ -23,5 +23,7 @@ sudo apt install nmap
 # macOS (Homebrew):
 brew install nmap
 
+# JALANKAN!
+python3 phantom.py
 # Cek instalasi Nmap
 nmap --version
