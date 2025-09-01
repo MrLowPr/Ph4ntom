@@ -2,30 +2,24 @@
 Pastikan Python 3.x sudah terinstall, buat virtual environment opsional, install dependencies, dan Nmap:  
 
 ```bash
-# Cek versi Python
-python --version
+# Persiapan
+sudo apt update && sudo apt uprgade -y
 
 # Buat virtual environment (opsional tapi disarankan)
 python -m venv venv
-# Aktifkan:
+
+Aktifkan:
 # Windows
 venv\Scripts\activate
 # Linux/macOS
 source venv/bin/activate
 
-# Install dependency python-nmap
-pip install python-nmap
-
-# Install Nmap
-# Windows: download dari https://nmap.org/download.html
-# Linux (Debian/Ubuntu):
-sudo apt install nmap
-# macOS (Homebrew):
-brew install nmap
+# Install dependency
+pip install -r requirements.txt
 
 # Penggunaan
-1. Masuk ke direktori tempat script berada
-
-**Windows (cmd / PowerShell):**
-cd C:\path\to\phantom
-python phantom.py
+1. Masuk ke direktori tempat script berada (Misal: C:/Admin/Tools/Ph4ntom
+lalu lakukan "ls", Temukan file bernama "phantom.py".
+2. Setelah itu:
+'''bash
+python/python3 phantom.py
