@@ -1,5 +1,5 @@
 ## Instalasi
-Pastikan Python 3.x sudah terinstall, buat virtual environment opsional, install dependencies, dan Nmap:  
+Pastikan Python 3.x sudah terinstall, buat virtual environment opsional, dan install dependencies requirement:  
 
 ```bash
 # Persiapan
