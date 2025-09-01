@@ -18,8 +18,9 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Penggunaan
-1. Masuk ke direktori tempat script berada (Misal: C:/Admin/Tools/Ph4ntom
+1. Masuk ke direktori tempat script berada (Misal: C:/Admin/Tools/Ph4ntom)
 lalu lakukan "ls", Temukan file bernama "phantom.py".
+2. Install dependency
+pip install -r requirements.txt
 2. Setelah itu:
-'''bash
 python/python3 phantom.py
