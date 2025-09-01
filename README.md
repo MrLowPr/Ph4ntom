@@ -14,6 +14,10 @@ venv\Scripts\activate
 # Linux/macOS
 source venv/bin/activate
 
+# Pasang
+git clone https://github.com/username/ph4ntom.git
+cd phantom
+
 # Penggunaan
 1. Masuk ke direktori tempat script berada (Misal: C:/Admin/Tools/Ph4ntom)
 lalu lakukan "ls", Temukan file bernama "phantom.py".
