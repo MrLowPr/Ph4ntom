@@ -3,7 +3,7 @@ Pastikan Python 3.x sudah terinstall, buat virtual environment opsional, install
 
 ```bash
 # Persiapan
-sudo apt update && sudo apt uprgade -y
+sudo apt update && sudo apt upgrade -y
 
 # Buat virtual environment (opsional tapi disarankan)
 python -m venv venv
@@ -13,9 +13,6 @@ Aktifkan:
 venv\Scripts\activate
 # Linux/macOS
 source venv/bin/activate
-
-# Install dependency
-pip install -r requirements.txt
 
 # Penggunaan
 1. Masuk ke direktori tempat script berada (Misal: C:/Admin/Tools/Ph4ntom)
