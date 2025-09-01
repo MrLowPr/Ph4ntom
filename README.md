@@ -26,7 +26,6 @@ brew install nmap
 # Penggunaan
 1. Masuk ke direktori tempat script berada
 
-- **Windows (cmd / PowerShell):**
-```bash
+**Windows (cmd / PowerShell):**
 cd C:\path\to\phantom
 python phantom.py
