@@ -23,7 +23,10 @@ sudo apt install nmap
 # macOS (Homebrew):
 brew install nmap
 
-# JALANKAN!
-python3 phantom.py
-# Cek instalasi Nmap
-nmap --version
+# Penggunaan
+1. Masuk ke direktori tempat script berada
+
+- **Windows (cmd / PowerShell):**
+```bash
+cd C:\path\to\phantom
+python phantom.py
