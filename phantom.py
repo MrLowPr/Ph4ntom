@@ -4,7 +4,7 @@ import getpass
 import os
 import time
 
-# Helper untuk convert bytes ke string agar bisa disimpan di JSON
+# Helper untuk convert bytes ke string
 def bytes_to_str(obj):
     if isinstance(obj, bytes):
         return obj.decode(errors="replace")
@@ -15,7 +15,6 @@ def bytes_to_str(obj):
     else:
         return obj
 
-# ASCII Art untuk Phantom
 ascii_art = r"""
 ______ _   _   ___  _   _ _____ ________  ___
 | ___ \ | | | /   || \ | |_   _|  _  |  \/  |
@@ -30,7 +29,6 @@ Recon Tool v1.0 by MrLowPr
 """
 print(ascii_art)
 
-# Menu pilihan scan
 print("Pilih mode scan:")
 print("1. Recon subnet + root (SYN scan stealth)")
 print("2. Efisien non-root (TCP connect scan)")
@@ -51,7 +49,7 @@ if choice not in mode_descriptions:
 print("\nInfo Mode Scan:")
 print(mode_descriptions[choice])
 
-# History subnet
+
 log_file = "subnet_history.txt"
 if os.path.exists(log_file):
     with open(log_file, "r") as f:
@@ -59,7 +57,6 @@ if os.path.exists(log_file):
 else:
     history = []
 
-# Tampilkan history
 if history:
     print("\nHistory subnet:")
     for idx, h in enumerate(history, 1):
@@ -79,7 +76,6 @@ else:
         print("Pilihan tidak valid")
         exit()
 
-# Arguments Nmap
 scan_args_map = {
     "1": "-sS -T3 -Pn",
     "2": "-sT -T4 -Pn",
@@ -88,7 +84,6 @@ scan_args_map = {
 }
 scan_args = scan_args_map[choice]
 
-# Scanner
 nm = nmap.PortScanner()
 print(f"\nMemulai scan subnet {subnet} ...\n")
 start_time = time.time()
@@ -101,7 +96,7 @@ try:
     if duration > 60:
         print("⚠️ Scan lama karena banyak host/port atau mode stealth")
 
-    # Output hasil
+    
     for host in nm.all_hosts():
         print(f"Host: {host} ({nm[host].hostname()})")
         print("Status:", nm[host].state())
@@ -121,7 +116,7 @@ try:
                     for port in nm[host]['tcp']:
                         f.write(f"Port {port}: {nm[host]['tcp'][port]['state']}\n")
                 f.write("\n")
-        # JSON aman
+        # JSON
         with open("hasil_scan.json", "w") as f:
             output = nm.get_nmap_last_output()
             json.dump(bytes_to_str(output), f, indent=2)
@@ -130,4 +125,5 @@ try:
         print("Hasil scan tidak disimpan.")
 
 except Exception as e:
+
     print("Terjadi error saat scan:", e)
